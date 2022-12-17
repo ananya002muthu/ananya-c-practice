@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+     int r,c;
+     int i,j,n,sum2,sum1;
+     cin>>r>>c;
+     int a[r],b[c];
+     for( i=0;i<r;i++)
+     {
+         cin>>a[i];
+         sum1=sum1+a[i];
+     }
+     for( j=0;j<c;j++)
+     {
+             cin>>b[j];
+             sum2=sum2+b[j];
+     }
+         if((r==c)&&(sum2==sum1))
+         {
+             cout<<"Same";
+         }
+         else 
+         {
+             cout<<"Not Same";
+         }
+}
