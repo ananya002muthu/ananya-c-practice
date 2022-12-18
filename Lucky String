@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int lucky(int sum)     //sum passed
+{
+    int c=0;          //counter variable
+    if(sum%2==0)       // even or odd
+    {      
+      c=c+1;            // even 1
+      return c;
+    }
+    else
+    {
+        return c;           // odd 0
+    }
+}
+int main()
+{
+    int j[100];  //integer- ASCII store use panrom
+    int i;       // for loop
+    int sum=0;  
+    string a;    //user value
+    getline(cin,a);   //inbuilt function to get two or more string
+    for(i=0;i<a.length();i++)  //0  1 2 3 4 5 6
+    {
+    j[i]=a[i];          //Ascii value 97 98
+    sum=sum+j[i];      //elements sum
+    }
+    if (lucky(sum)==1)     // sum value is passed to lucky function   1  / 0
+    {
+        cout<<a<<" is lucky";  
+    }
+    else
+    {
+        cout<<a<<" is not lucky";
+       
+    }
+}
